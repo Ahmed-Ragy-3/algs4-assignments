@@ -11,11 +11,13 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
    private int size;
 
    // construct an empty randomized queue
+   @SuppressWarnings("unchecked")
    public RandomizedQueue() {
       queue = (Item[]) new Object[50];
       this.size = 0;
    }
 
+   @SuppressWarnings("unchecked")
    private void resize() {
       if (size == queue.length) {
          // increase size to double
