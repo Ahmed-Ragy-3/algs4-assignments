@@ -1,18 +1,14 @@
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// import edu.princeton.cs.algs4.Huffman;
 import edu.princeton.cs.algs4.BinaryStdIn;
 import edu.princeton.cs.algs4.BinaryStdOut;
 
-@SuppressWarnings("unused")
 public class BurrowsWheeler {
+   private static final int R = 256;
 
-	private static final int R = 256;
-
-	private static String sort(String str) {
+   private static String sort(String str) {
 		int n = str.length();
 		char[] srt = new char[n];
 
@@ -70,7 +66,6 @@ public class BurrowsWheeler {
 		for (int i = 0; i < n; i++) {
 			next[i] = map.get(srt.charAt(i)).poll();
 		}
-		System.out.println("next[]: " + Arrays.toString(next));
 
 		// Original string construction from next[] and srt
 		int cur = first;

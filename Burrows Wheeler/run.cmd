@@ -1,0 +1,1 @@
+javac -cp ".;..\lib\algs4.jar" *.java && java -cp ".;..\lib\algs4.jar" BurrowsWheeler - < abra.txt | java -cp ".;..\lib\algs4.jar" BurrowsWheeler +
