@@ -1,0 +1,38 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Burrows Wheeler Transform",
+			"request": "launch",
+			"mainClass": "BurrowsWheeler",
+			"args": "- < \"Burrows Wheeler\"/abra.txt",
+			"console": "integratedTerminal"
+		},
+		{
+			"type": "java",
+			"name": "Burrows Wheeler Inverse Transform",
+			"request": "launch",
+			"mainClass": "BurrowsWheeler",
+			"args": "+ < \"Burrows Wheeler\"/out.txt",
+			"console": "integratedTerminal"
+		},
+		{
+			"type": "java",
+			"name": "Move to front Transform",
+			"request": "launch",
+			"mainClass": "MoveToFront.java",
+			"args": "- < \"Burrows Wheeler\"/abra.txt"
+		},
+		{
+			"type": "java",
+			"name": "Move to front Inverse Transform",
+			"request": "launch",
+			"mainClass": "MoveToFront.java",
+			"args": "+ < \"Burrows Wheeler\"/out.txt"
+		}
+	]
+}
