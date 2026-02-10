@@ -7,22 +7,22 @@ public class MoveToFront {
 
 	private static final int R = 256;
 
-	private static void fillSequence(LinkedList<Byte> sequence) {
+	private static void fillSequence(LinkedList<Integer> sequence) {
 		// assert sequence.isEmpty();
 		for (int i = 0; i < R; i++) {
 			// ith extended ASCII character
-			sequence.addLast((byte) i);
+			sequence.addLast(i);
 		}
 	}
 
 	// apply move-to-front encoding, reading from standard input and
 	public static void encode() {
-		LinkedList<Byte> seq = new LinkedList<>();
+		LinkedList<Integer> seq = new LinkedList<>();
 		fillSequence(seq);
 
 		// writing to standard output
 		while (!BinaryStdIn.isEmpty()) {
-			byte c = (byte) BinaryStdIn.readChar();
+			int c = BinaryStdIn.readChar();
 			int idx = seq.indexOf(c);
 			BinaryStdOut.write(idx, 8);
 			seq.remove(idx);
@@ -34,13 +34,13 @@ public class MoveToFront {
 
 	// apply move-to-front decoding, reading from standard input and
 	public static void decode() {
-		LinkedList<Byte> seq = new LinkedList<>();
+		LinkedList<Integer> seq = new LinkedList<>();
 		fillSequence(seq);
 
 		// writing to standard output
 		while (!BinaryStdIn.isEmpty()) {
 			int idx = BinaryStdIn.readChar();
-			byte c = seq.get(idx);
+			int c = seq.get(idx);
 			BinaryStdOut.write(c, 8);
 			seq.remove(idx);
 			seq.addFirst(c);
