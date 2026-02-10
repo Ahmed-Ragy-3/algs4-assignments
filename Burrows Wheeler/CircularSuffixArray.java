@@ -16,6 +16,8 @@ public class CircularSuffixArray {
 		int alphabet = 256;
 
 		this.suff = new int[n];		// order of suffixes
+		if (n == 0) return;
+		
 		int[] c = new int[n]; 		// equivalence classes
 		int[] cnt = new int[Math.max(alphabet, n)];
 

@@ -8,10 +8,10 @@ public class MoveToFront {
 	private static final int R = 256;
 
 	private static void fillSequence(LinkedList<Byte> sequence) {
-		assert sequence.isEmpty();
-		for (byte i = 0; i < R; i++) {
+		// assert sequence.isEmpty();
+		for (int i = 0; i < R; i++) {
 			// ith extended ASCII character
-			sequence.addLast(i);
+			sequence.addLast((byte) i);
 		}
 	}
 
